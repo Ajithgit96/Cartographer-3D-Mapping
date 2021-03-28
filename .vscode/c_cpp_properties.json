@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/saiajith/cartographer_ws_ros1/install_isolated/include/**",
+                "/home/saiajith/catkin_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/saiajith/catkin_ws/src/sitl_gazebo/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}

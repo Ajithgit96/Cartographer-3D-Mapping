@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/saiajith/cartographer_ws_ros1/devel_isolated/cartographer_ros_msgs/setup.sh
