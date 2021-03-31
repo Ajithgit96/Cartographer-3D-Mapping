@@ -1,4 +1,4 @@
-**> Overview**
+**Overview**
 
 * This project deals with 3D Mapping of environment with Cartographer.
 
