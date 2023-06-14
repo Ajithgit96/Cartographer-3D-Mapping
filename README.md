@@ -32,7 +32,7 @@
 - Three communication protocols that might appear when you run wireshark with LiDAR connected are ARP, DHCP, UDP.
 - ARP (Address Resolution Protocol) – Indicates successful communication and gives IP addresses of both computer port and LiDAR.
 - ARP protocol in wireshark would look like:
-![Screenshot_from_2020-09-10_01-30-21](uploads/2ddf1e8f8c9689e9024a127c76348d5f/Screenshot_from_2020-09-10_01-30-21.png)
+![Readme](https://raw.githubusercontent.com/Ajithgit96/Cartographer-3D-Mapping/master/media/Screenshot%20from%202020-09-10%2001-30-21.png)
 - The statement here "Who has 192.168.42.31? Tell 192.168.42.35" means 192.168.42.35 is sender (3D LiDAR) IP address and 192.168.42.31 (computer) is Target IP address.
 - Note: By default, the IP address of the VLP-16 is set to be 192.168.1.201 by the factory.
 - But the IP address of VLP 16 used in this project was 192.168.42.35
