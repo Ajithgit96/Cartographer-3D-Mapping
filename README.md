@@ -112,6 +112,7 @@ source: https://google-cartographer-ros.readthedocs.io/en/latest/
 - Result of 'Validate your bag': The highlighted section here suggests that IMU linear acceleration value is different from expected value
 ![Screenshot_from_2021-01-05_16-21-49](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/Screenshot%20from%202021-01-05%2016-21-49.png?raw=true)
 - Challenge: Generated 3D point cloud map of environment rotates as the LiDAR (velodyne frame) rotates. It is not a desired feature.
+
 ![3DMap](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/3D%20Map.PNG?raw=true)
 - Next steps: 
    - Generating a map of bigger environment with static objects (which do not move) and saving it.
