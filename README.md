@@ -43,10 +43,10 @@
 
 - These commands will differ for different computers
 - Now the connection must be established and it results in UDP communication protocol happening, which would appear in wireshark like below:
-![Screenshot_from_2020-09-10_17-35-16](uploads/af427ca7706d281c2079a511dd536a2d/Screenshot_from_2020-09-10_17-35-16.png)
+![Readme](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/Screenshot%20from%202020-09-10%2017-35-16.png?raw=true)
 
 - By putting in LiDAR IP address in your web browser, the following webpage should appear:
-![Screenshot_from_2020-09-10_17-49-46](uploads/b36cf2408dcdd26ce21122e9390cb59b/Screenshot_from_2020-09-10_17-49-46.png)
+![Readme](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/Screenshot%20from%202020-09-10%2017-49-46.png?raw=true)
 
 - Note: DHCP (Dynamic Host Configuration Protocol) - It is not suggested to turn DHCP on. Before doing so, ensure a DHCP server on the network is available to provide the sensor with an IP address. If you turn on DHCP and loose contact with the sensor, there is a section in troubleshooting in above manual to solve this problem.
 
@@ -57,7 +57,7 @@
 - Note: As the IP address of VLP 16 used in this project was 192.168.42.35, it requires an IP address change in the velodyne driver (ROS melodic) in the file velodyne/velodyne_driver/config/VLP16-velodyne_driver_node-params.yaml, ‘device_ip: 192.168.1.201’ must be changed to ‘device_ip: 192.168.42.35’
 - Note: The 3D LiDAR data is currently published with reference to the frame "velodyne".
 - Point Cloud data is published with the topic name "/velodyne_points" and when visualized in Rviz, it would appear as below.
-![Screenshot_from_2020-12-15_11-41-31](uploads/77e316b59fb6f6d8b9188e115d2af98f/Screenshot_from_2020-12-15_11-41-31.png)
+![Readme](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/Screenshot%20from%202020-12-15%2011-41-31.png?raw=true)
 
 - Terminal commands for ROS melodic to run the launch file and visualizing in ROS melodic:
    - $ roslaunch velodyne_pointcloud VLP16_points.launch
@@ -75,7 +75,7 @@
 - Cartographer was used in this project to perform real-time simultaneous localization and mapping (SLAM) in 3D.
 
 - 3D Mapping in this project was performed in ROS melodic distribution with sensor data from both 3D LiDAR and IMU sensors. The workflow looks like below and is explained in [https://google-cartographer-ros.readthedocs.io/en/latest/ros_api.html](https://google-cartographer-ros.readthedocs.io/en/latest/ros_api.html):
-![Capture](uploads/e0a145a26f978b0bdcd25d4fd7d00241/Capture.PNG)
+![Capture](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/Capture.PNG?raw=true)
 
 source: https://google-cartographer-ros.readthedocs.io/en/latest/
 
@@ -103,15 +103,16 @@ source: https://google-cartographer-ros.readthedocs.io/en/latest/
    - [ WARN] [1606045752.520877411, 1599753182.606446007]: Could not compute submap fading: "map" passed to lookupTransform argument target_frame does not exist.
 
 - TF tree that results from the above URDF configuration looks like below:
-![Screenshot_from_2020-11-22_12-33-44](uploads/1c1c0266a0535da37571b79a9b05c89b/Screenshot_from_2020-11-22_12-33-44.png)
+![Screenshot_from_2020-11-22_12-33-44](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/Screenshot%20from%202020-11-22%2012-33-44.png?raw=true)
 
 - TF tree with errors and lacking proper .lua configuration would look like:
-![Screenshot_from_2020-11-22_12-51-01](uploads/dbc1ee577a5abc1cabd9a39c7824ea5f/Screenshot_from_2020-11-22_12-51-01.png)
+![Screenshot_from_2020-11-22_12-51-01](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/Screenshot%20from%202020-11-22%2012-51-01.png?raw=true)
 - With these changes, cartographer must be able to generate 3D Maps of the environment in ROS.
 - Hint: In case of not getting desired results with ROS bags, cartographer has the feature ‘Validate your bag’.
 - Result of 'Validate your bag': The highlighted section here suggests that IMU linear acceleration value is different from expected value
-![Screenshot_from_2021-01-05_16-21-49](uploads/cc7d4d172f5fb5a40e5a8ae7a051dc44/Screenshot_from_2021-01-05_16-21-49.png)
+![Screenshot_from_2021-01-05_16-21-49](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/Screenshot%20from%202021-01-05%2016-21-49.png?raw=true)
 - Challenge: Generated 3D point cloud map of environment rotates as the LiDAR (velodyne frame) rotates. It is not a desired feature.
+![3DMap](https://github.com/Ajithgit96/Cartographer-3D-Mapping/blob/master/media/3D%20Map.PNG?raw=true)
 - Next steps: 
    - Generating a map of bigger environment with static objects (which do not move) and saving it.
    - Using this map to navigate autonomously using projects like 'navigation 2' in ROS. It works like we give an approximate initial pose of the robot and a navigation goal. 
